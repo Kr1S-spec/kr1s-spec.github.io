@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <title>КП Хилс – Къщи под наем</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>КП Хилс</h1>
+  <nav>
+    <button class="nav-btn">За нас</button>
+    <button class="nav-btn" onclick="scrollToHouses()">Налични къщи</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ЗА НАС -->
+  <section id="about">
+    <h2>За нас</h2>
+    <p>
+      КП Хилс е компания, специализирана в отдаването на къщи под наем
+      в различни региони на България.
+    </p>
+
+    <div class="about-grid">
+      <div class="info-box">
+        <p><strong>Телефон:</strong> +359 878 802 151</p>
+        <p><strong>Телефон:</strong> +359 878 123 459</p>
+        <p><strong>Имейл: <a href="mailto:officeresheniabg@gmail.com?Subject=Hi%20mate" target="_top">officeresheniabg@gmail.com</a>
+        <p><strong>Локация:</strong> България</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Нашата дейност</h3>
+        <p>
+          Предлагаме подбрани имоти за краткосрочен и дългосрочен престой,
+          с фокус върху комфорт и коректност.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- КЪЩИ -->
+  <section id="houses-section">
+    <h2>Налични имоти под наем</h2>
+
+    <div class="houses-grid">
+
+
+<!--Tova se kopira za vseki tab s kushta-->
+      <a href="BeliOsym.html" target="_blank" class="house-link">
+        <div class="house-card">
+          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
+          <h3>Бели Осъм</h3>
+          
+          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
+          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
+        </div>
+      </a>
+<!--DO tuka-->
+
+<a href="Galeriq2.html" target="_blank" class="house-link">
+        <div class="house-card">
+          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
+          <h3>Бели Осъм</h3>
+          
+          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
+          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
+        </div>
+      </a>
+
+<a href="Galeriq3.html" target="_blank" class="house-link">
+        <div class="house-card">
+          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
+          <h3>Бели Осъм</h3>
+          
+          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
+          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
+        </div>
+      </a>
+
+<a href="Galeriq4.html" target="_blank" class="house-link">
+        <div class="house-card">
+          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
+          <h3>Бели Осъм</h3>
+          
+          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
+          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
+        </div>
+      </a>
+
+<a href="Galeriq5.html" target="_blank" class="house-link">
+        <div class="house-card">
+          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
+          <h3>Бели Осъм</h3>
+          
+          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
+          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
+        </div>
+      </a>
+     
+
+<a href="Galeriq6.html" target="_blank" class="house-link">
+        <div class="house-card">
+          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
+          <h3>Бели Осъм</h3>
+          
+          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
+          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
+        </div>
+      </a>
+
+<script src="script.js"></script>
+</body>
+</html>
