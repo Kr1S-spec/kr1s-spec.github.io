@@ -235,3 +235,24 @@ iframe {
   }
 }
 
+@media (max-width: 768px) {
+  header nav {
+    display: flex;
+    flex-direction: row; /* keep buttons side by side */
+    gap: 10px;
+    flex-wrap: wrap; /* allows wrapping if too small */
+  }
+
+  .back-btn, .nav-btn {
+    padding: 15px 25px;  /* bigger buttons */
+    font-size: 18px;      /* bigger text */
+    text-align: center;
+    margin: 5px 0;       /* small spacing between rows */
+  }
+
+  .gallery img {
+    width: 100%;          /* responsive full width */
+    height: auto;
+  }
+}
+
