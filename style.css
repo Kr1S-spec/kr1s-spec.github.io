@@ -30,21 +30,16 @@ header {
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
-  font-weight: bold;
-  text-align: center;
 }
 
 .back-btn {
-  display: inline-block;
   background: #3b82f6;
   color: white;
-  text-decoration: none;
   padding: 10px 18px;
   border-radius: 10px;
-  font-size: 16px;
-  font-weight: bold;
+  text-decoration: none;
+  font-weight: 600;
   cursor: pointer;
-  text-align: center;
 }
 
 main {
@@ -125,7 +120,7 @@ iframe {
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
-  border-radius: 14px;
+  border-radius: 14px; /* added rounded corners to images */
 }
 
 .gallery img:hover {
@@ -143,10 +138,17 @@ iframe {
     padding: 15px 20px; /* slightly smaller padding on mobile */
   }
 
-  .nav-btn, .back-btn {
-    padding: 8px 14px; /* slightly smaller buttons to fit nicely */
-    font-size: 14px;    /* slightly smaller button text */
-    margin-left: 5px;   /* reduce spacing between buttons */
+  .nav-btn {
+    padding: 12px 22px; /* slightly smaller buttons */
+    font-size: 16px;   /* smaller button text */
+  }
+
+  .back-btn {
+    padding: 12px 22px;
+    font-size: 16px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 10px;
   }
 
   .about-grid {
@@ -160,7 +162,7 @@ iframe {
   }
 
   .houses-grid {
-    grid-template-columns: repeat(2, minmax(140px, 1fr)); /* slightly wider cards */
+    grid-template-columns: repeat(2, minmax(180px, 1fr)); /* wider minimum for cards */
     gap: 20px;
   }
 
@@ -178,5 +180,3 @@ iframe {
     height: 200px; /* slightly taller maps */
   }
 }
-
-
