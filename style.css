@@ -120,7 +120,7 @@ iframe {
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
-  border-radius: 14px; /* added rounded corners to images */
+  border-radius: 14px;
 }
 
 .gallery img:hover {
@@ -139,7 +139,7 @@ iframe {
   }
 
   .nav-btn {
-    padding: 12px 22px; /* slightly smaller buttons */
+    padding: 12px 22px; /* smaller buttons */
     font-size: 16px;   /* smaller button text */
   }
 
@@ -162,7 +162,7 @@ iframe {
   }
 
   .houses-grid {
-    grid-template-columns: repeat(2, minmax(180px, 1fr)); /* wider minimum for cards */
+    grid-template-columns: repeat(2, minmax(240px, 1fr)); /* wider house cards */
     gap: 20px;
   }
 
