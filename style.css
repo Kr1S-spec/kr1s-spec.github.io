@@ -1,3 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e0f2fe;
+  color: #0f172a;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+#about {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+#about h2 {
+  margin-bottom: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -52,10 +82,11 @@ main {
 
 .houses-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
 }
+
 
 .house-link {
   text-decoration: none;
@@ -216,4 +247,11 @@ iframe {
 
 .back-btn:hover {
   background: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .houses-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
 }
