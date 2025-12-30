@@ -9,12 +9,12 @@
 <body>
 
 <header>
-  <div style="display: flex; align-items: center;">
+  <div class="header-left">
     <img src="КП Хилс.png" alt="Joro" width="100" height="48" />
-    <h1 style="margin-left: 10px;">КП Хилс</h1>
+    <h1>КП Хилс</h1>
   </div>
   <nav>
-    <button class="nav-btn">За нас</button>
+    <button class="nav-btn" onclick="location.href='#about'">За нас</button>
     <button class="nav-btn" onclick="scrollToHouses()">Налични имоти</button>
   </nav>
 </header>
@@ -33,7 +33,7 @@
       <div class="info-box">
         <p><strong>Телефон:</strong> +359 878 802 151</p>
         <p><strong>Телефон:</strong> +359 878 123 459</p>
-        <p><strong>Имейл: <a href="mailto:officeresheniabg@gmail.com?Subject=Hi%20mate" target="_top">officeresheniabg@gmail.com</a></p>
+        <p><strong>Имейл: <a href="mailto:officeresheniabg@gmail.com?Subject=Hi%20mate">officeresheniabg@gmail.com</a></strong></p>
         <p><strong>Локация:</strong> България</p>
       </div>
 
@@ -52,7 +52,6 @@
     <h2>Налични имоти под наем</h2>
 
     <div class="houses-grid">
-      <!-- Repeat for each house -->
       <a href="BeliOsym.html" class="house-link">
         <div class="house-card">
           <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
@@ -80,37 +79,18 @@
         </div>
       </a>
 
-      <a href="Galeriq4.html" class="house-link">
-        <div class="house-card">
-          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
-          <h3>Бели Осъм</h3>
-          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
-          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
-        </div>
-      </a>
-
-      <a href="Galeriq5.html" class="house-link">
-        <div class="house-card">
-          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
-          <h3>Бели Осъм</h3>
-          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
-          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
-        </div>
-      </a>
-
-      <a href="Galeriq6.html" class="house-link">
-        <div class="house-card">
-          <img src="images/BeliOsym/BeliOsymFront.jpg" alt='Къща за гости "Greem Hills"'>
-          <h3>Бели Осъм</h3>
-          <p class="price">Цена: 70 € / двойна стая | Цена: 80 € / студио</p>
-          <iframe src="https://www.google.com/maps?q=42.84300237041925,24.600251233139524&z=15&output=embed"></iframe>
-        </div>
-      </a>
+      <!-- Add more houses here as needed -->
     </div>
   </section>
 
 </main>
 
-<script src="script.js"></script>
+<script>
+function scrollToHouses() {
+  const housesSection = document.getElementById('houses-section');
+  housesSection.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
