@@ -11,7 +11,6 @@ body {
   font-family: Arial, sans-serif;
   background: #e0f2fe;
   color: #0f172a;
-  font-size: 16px; /* desktop base */
 }
 
 header {
@@ -23,11 +22,6 @@ header {
   align-items: center;
 }
 
-header h1 {
-  margin-left: 10px;
-  font-size: 28px;
-}
-
 .nav-btn {
   background: #3b82f6;
   color: white;
@@ -36,7 +30,21 @@ header h1 {
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.back-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 10px;
   font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
 }
 
 main {
@@ -79,19 +87,21 @@ main {
 
 .house-card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
   border-radius: 14px;
 }
 
-.house-card h3 {
-  font-size: 20px;
-  margin: 10px 0 5px 0;
-}
-
 .price {
   font-weight: bold;
-  font-size: 16px;
+}
+
+.available {
+  color: green;
+}
+
+.unavailable {
+  color: red;
 }
 
 iframe {
@@ -102,30 +112,6 @@ iframe {
   margin-top: 10px;
 }
 
-/* Style the back button in gallery pages like nav buttons */
-.back-btn {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-decoration: none; /* remove underline */
-  display: inline-block;
-  font-size: 16px;
-  margin-top: 10px;
-}
-
-/* Gallery images rounded edges */
-.gallery img {
-  width: 300px;
-  height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  border-radius: 14px; /* same as main page house cards */
-}
-
-
 /* GALLERY */
 .gallery {
   display: grid;
@@ -135,57 +121,32 @@ iframe {
 }
 
 .gallery img {
-  width: 100%;
+  width: 300px;
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
+  border-radius: 14px;
 }
 
 .gallery img:hover {
   transform: scale(1.2);
 }
 
-.gallery h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-/* Buttons inside gallery pages */
-.gallery-btn {
-  background: #3b82f6;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  display: inline-block;
-  text-decoration: none;
-}
-
 /* MOBILE IMPROVEMENTS */
 @media (max-width: 768px) {
-
   body {
     font-size: 18px; /* bigger general text */
   }
 
   header {
-    padding: 15px 20px;
+    font-size: 20px; /* bigger header text */
+    padding: 15px 20px; /* slightly smaller padding on mobile */
   }
 
-  header h1 {
-    font-size: 24px;
-  }
-
-  .nav-btn {
-    padding: 15px 25px; /* bigger buttons */
-    font-size: 18px;
-  }
-
-  main {
-    padding: 20px;
+  .nav-btn, .back-btn {
+    padding: 12px 20px; /* slightly smaller buttons to fit nicely */
+    font-size: 16px;    /* slightly smaller button text */
+    margin-left: 5px;   /* reduce spacing between buttons */
   }
 
   .about-grid {
@@ -194,26 +155,18 @@ iframe {
   }
 
   .info-box, .house-card {
-    padding: 20px;      /* more space inside cards */
+    padding: 25px;      /* more space inside cards */
     font-size: 16px;    /* bigger text */
   }
 
   .houses-grid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-    gap: 15px;
-  }
-
-  .house-card h3 {
-    font-size: 18px;
-  }
-
-  .price {
-    font-size: 16px;
+    gap: 20px;
   }
 
   .gallery {
     grid-template-columns: 1fr; /* stack images vertically */
-    gap: 15px;
+    gap: 20px;
   }
 
   .gallery img {
@@ -221,38 +174,7 @@ iframe {
     height: auto;
   }
 
-  .gallery h2 {
-    font-size: 22px;
-  }
-
-  .gallery-btn {
-    padding: 15px 25px;
-    font-size: 18px;
-  }
-
   iframe {
-    height: 200px; /* taller maps */
+    height: 200px; /* slightly taller maps */
   }
 }
-
-@media (max-width: 768px) {
-  header nav {
-    display: flex;
-    flex-direction: row; /* keep buttons side by side */
-    gap: 10px;
-    flex-wrap: wrap; /* allows wrapping if too small */
-  }
-
-  .back-btn, .nav-btn {
-    padding: 15px 25px;  /* bigger buttons */
-    font-size: 18px;      /* bigger text */
-    text-align: center;
-    margin: 5px 0;       /* small spacing between rows */
-  }
-
-  .gallery img {
-    width: 100%;          /* responsive full width */
-    height: auto;
-  }
-}
-
