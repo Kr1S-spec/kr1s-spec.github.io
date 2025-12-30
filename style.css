@@ -102,6 +102,30 @@ iframe {
   margin-top: 10px;
 }
 
+/* Style the back button in gallery pages like nav buttons */
+.back-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none; /* remove underline */
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Gallery images rounded edges */
+.gallery img {
+  width: 300px;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 14px; /* same as main page house cards */
+}
+
+
 /* GALLERY */
 .gallery {
   display: grid;
@@ -210,3 +234,4 @@ iframe {
     height: 200px; /* taller maps */
   }
 }
+
