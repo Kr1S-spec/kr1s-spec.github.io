@@ -61,10 +61,10 @@ main {
 }
 
 .houses-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  
+  grid-template-columns: 1fr;
   gap: 30px;
-  margin-top: 30px;
+  
 }
 
 .house-link {
@@ -180,3 +180,4 @@ iframe {
     height: 200px; /* slightly taller maps */
   }
 }
+
