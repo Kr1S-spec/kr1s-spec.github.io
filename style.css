@@ -61,11 +61,10 @@ main {
 }
 
 .houses-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-top: 30px;
+    grid-template-columns: 1fr !important; /* 1 by 1 on mobile */
+    gap: 20px;
 }
+
 
 .house-link {
   text-decoration: none;
@@ -180,4 +179,5 @@ iframe {
     height: 200px; /* slightly taller maps */
   }
 }
+
 
