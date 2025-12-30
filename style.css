@@ -11,6 +11,7 @@ body {
   font-family: Arial, sans-serif;
   background: #e0f2fe;
   color: #0f172a;
+  font-size: 16px; /* desktop base */
 }
 
 header {
@@ -22,6 +23,11 @@ header {
   align-items: center;
 }
 
+header h1 {
+  margin-left: 10px;
+  font-size: 28px;
+}
+
 .nav-btn {
   background: #3b82f6;
   color: white;
@@ -30,6 +36,7 @@ header {
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
+  font-size: 16px;
 }
 
 main {
@@ -77,16 +84,14 @@ main {
   border-radius: 14px;
 }
 
+.house-card h3 {
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+}
+
 .price {
   font-weight: bold;
-}
-
-.available {
-  color: green;
-}
-
-.unavailable {
-  color: red;
+  font-size: 16px;
 }
 
 iframe {
@@ -118,18 +123,26 @@ iframe {
 
 /* MOBILE IMPROVEMENTS */
 @media (max-width: 768px) {
+
   body {
     font-size: 18px; /* bigger general text */
   }
 
   header {
-    font-size: 20px; /* bigger header text */
-    padding: 15px 20px; /* slightly smaller padding on mobile */
+    padding: 15px 20px;
+  }
+
+  header h1 {
+    font-size: 24px;
   }
 
   .nav-btn {
     padding: 15px 25px; /* bigger buttons */
-    font-size: 18px;   /* bigger button text */
+    font-size: 18px;
+  }
+
+  main {
+    padding: 20px;
   }
 
   .about-grid {
@@ -138,18 +151,26 @@ iframe {
   }
 
   .info-box, .house-card {
-    padding: 25px;      /* more space inside cards */
+    padding: 20px;      /* more space inside cards */
     font-size: 16px;    /* bigger text */
   }
 
   .houses-grid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-    gap: 20px;
+    gap: 15px;
+  }
+
+  .house-card h3 {
+    font-size: 18px;
+  }
+
+  .price {
+    font-size: 16px;
   }
 
   .gallery {
     grid-template-columns: 1fr; /* stack images vertically */
-    gap: 20px;
+    gap: 15px;
   }
 
   .gallery img {
@@ -158,6 +179,6 @@ iframe {
   }
 
   iframe {
-    height: 200px; /* slightly taller maps */
+    height: 200px; /* taller maps */
   }
 }
