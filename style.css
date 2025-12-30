@@ -79,7 +79,7 @@ main {
 
 .house-card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 14px;
 }
@@ -111,7 +111,7 @@ iframe {
 }
 
 .gallery img {
-  width: 300px;
+  width: 100%;
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -119,6 +119,25 @@ iframe {
 
 .gallery img:hover {
   transform: scale(1.2);
+}
+
+.gallery h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Buttons inside gallery pages */
+.gallery-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* MOBILE IMPROVEMENTS */
@@ -176,6 +195,15 @@ iframe {
   .gallery img {
     width: 100%;
     height: auto;
+  }
+
+  .gallery h2 {
+    font-size: 22px;
+  }
+
+  .gallery-btn {
+    padding: 15px 25px;
+    font-size: 18px;
   }
 
   iframe {
