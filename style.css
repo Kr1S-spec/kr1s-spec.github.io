@@ -52,7 +52,7 @@ main {
 
 .houses-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
@@ -97,6 +97,7 @@ iframe {
   margin-top: 10px;
 }
 
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -109,80 +110,46 @@ iframe {
   height: auto;
   transition: transform 0.3s ease;
   cursor: pointer;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .gallery img:hover {
   transform: scale(1.2);
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  flex-direction: column;
-}
-
-.modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
-}
-
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: white;
-  background: rgba(0,0,0,0.4);
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  user-select: none;
-}
-
-.arrow:hover {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.arrow-left {
-  left: 20px;
-}
-
-.arrow-right {
-  right: 20px;
-}
-
+/* MOBILE IMPROVEMENTS */
 @media (max-width: 768px) {
-  .houses-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  body {
+    font-size: 18px; /* bigger general text */
   }
 
   header {
-    flex-direction: column;
-    align-items: flex-start;
+    font-size: 20px; /* bigger header text */
+    padding: 15px 20px; /* slightly smaller padding on mobile */
   }
 
   .nav-btn {
-    margin-top: 10px;
-    margin-left: 0;
+    padding: 15px 25px; /* bigger buttons */
+    font-size: 18px;   /* bigger button text */
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr; /* stack info boxes vertically */
+    gap: 20px;
+  }
+
+  .info-box, .house-card {
+    padding: 25px;      /* more space inside cards */
+    font-size: 16px;    /* bigger text */
+  }
+
+  .houses-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    gap: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr; /* stack images vertically */
+    gap: 20px;
   }
 
   .gallery img {
@@ -190,7 +157,7 @@ iframe {
     height: auto;
   }
 
-  main {
-    padding: 20px;
+  iframe {
+    height: 200px; /* slightly taller maps */
   }
 }
