@@ -139,8 +139,8 @@ iframe {
   }
 
   .nav-btn {
-    padding: 12px 22px; /* smaller buttons */
-    font-size: 16px;   /* smaller button text */
+    padding: 12px 22px; /* slightly smaller buttons */
+    font-size: 16px;   /* button text */
   }
 
   .back-btn {
@@ -162,7 +162,7 @@ iframe {
   }
 
   .houses-grid {
-    grid-template-columns: 1fr; /* 1 column, full width */
+    grid-template-columns: 1fr !important; /* 1 by 1 on mobile */
     gap: 20px;
   }
 
