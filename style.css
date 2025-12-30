@@ -161,7 +161,7 @@ iframe {
   }
 
   .houses-grid {
-    grid-template-columns: 1fr !important; /* 1 by 1 on mobile */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
@@ -179,5 +179,6 @@ iframe {
     height: 200px; /* slightly taller maps */
   }
 }
+
 
 
