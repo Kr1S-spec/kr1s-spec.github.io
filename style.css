@@ -22,6 +22,15 @@ header {
   align-items: center;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left h1 {
+  margin-left: 10px;
+}
+
 .nav-btn {
   background: #3b82f6;
   color: white;
@@ -30,16 +39,11 @@ header {
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
+  font-size: 16px;
 }
 
-.back-btn {
-  background: #3b82f6;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
+.nav-btn:hover {
+  background: #2563eb;
 }
 
 main {
@@ -61,10 +65,11 @@ main {
 }
 
 .houses-grid {
-    grid-template-columns: 1fr !important; /* 1 by 1 on mobile */
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
 }
-
 
 .house-link {
   text-decoration: none;
@@ -90,14 +95,6 @@ main {
   font-weight: bold;
 }
 
-.available {
-  color: green;
-}
-
-.unavailable {
-  color: red;
-}
-
 iframe {
   width: 100%;
   height: 160px;
@@ -106,79 +103,50 @@ iframe {
   margin-top: 10px;
 }
 
-/* GALLERY */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.gallery img {
-  width: 300px;
-  height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  border-radius: 14px;
-}
-
-.gallery img:hover {
-  transform: scale(1.2);
-}
-
 /* MOBILE IMPROVEMENTS */
 @media (max-width: 768px) {
   body {
-    font-size: 18px; /* bigger general text */
+    font-size: 18px;
   }
 
   header {
-    font-size: 20px; /* bigger header text */
-    padding: 15px 20px; /* slightly smaller padding on mobile */
+    font-size: 20px;
+    padding: 15px 20px;
   }
 
   .nav-btn {
-    padding: 12px 22px; /* slightly smaller buttons */
-    font-size: 16px;   /* button text */
-  }
-
-  .back-btn {
-    padding: 12px 22px;
+    padding: 12px 18px;
     font-size: 16px;
-    border-radius: 10px;
-    display: inline-block;
-    margin-left: 10px;
   }
 
   .about-grid {
-    grid-template-columns: 1fr; /* stack info boxes vertically */
-    gap: 20px;
-  }
-
-  .info-box, .house-card {
-    padding: 25px;      /* more space inside cards */
-    font-size: 16px;    /* bigger text */
-  }
-
-  .houses-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
+  .info-box, .house-card {
+    padding: 25px;
+    font-size: 16px;
+  }
+
+  /* FORCE 1 column for housing cards */
+  .houses-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
   .gallery {
-    grid-template-columns: 1fr; /* stack images vertically */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .gallery img {
     width: 100%;
     height: auto;
+    border-radius: 14px;
   }
 
   iframe {
-    height: 200px; /* slightly taller maps */
+    height: 200px;
   }
 }
-
-
-
