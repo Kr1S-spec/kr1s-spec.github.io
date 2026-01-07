@@ -1,3 +1,4 @@
+/* --- GLOBAL --- */
 * {
   box-sizing: border-box;
 }
@@ -27,16 +28,17 @@ h2 {
   font-size: 1.6rem;
 }
 
+/* --- HEADER --- */
 header {
+  position: sticky;
   top: 0;
   z-index: 99;
-  position: sticky;
-  width: 100%;          /* always full viewport width */
+  width: 100%;
   background: #1e3a8a;
   color: white;
   padding: 15px 20px;
   display: flex;
-  justify-content: center; /* center the inner container */
+  justify-content: center;
 }
 
 header .header-inner {
@@ -44,16 +46,11 @@ header .header-inner {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;  /* constrain to main content width on large screens */
+  max-width: 1200px;
 }
 
-
-#houses-section {
-  scroll-margin-top: 40px;
-}
-
-.HeaderButton {
-  min-height: 70px;
+header img {
+  display: block;
 }
 
 .nav-btn {
@@ -65,12 +62,21 @@ header .header-inner {
   cursor: pointer;
   margin-left: 10px;
   font-size: 1rem;
+  transition: background 0.3s;
 }
 
+.nav-btn:hover {
+  background: #2563eb;
+}
+
+/* --- MAIN --- */
 main {
-  padding: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* --- ABOUT SECTION --- */
 .about-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -90,7 +96,6 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
 }
 
 .info-box:hover {
@@ -98,16 +103,9 @@ main {
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
 }
 
-.contact-box {
-  grid-column: 1 / -1;
-  min-height: 180px;
-}
-
 .info-box h3 {
   font-size: 1.5rem;
   margin-bottom: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 .info-box p {
@@ -116,6 +114,12 @@ main {
   opacity: 0.9;
 }
 
+.contact-box {
+  grid-column: 1 / -1;
+  min-height: 180px;
+}
+
+/* --- HOUSES SECTION --- */
 .houses-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -172,6 +176,7 @@ iframe {
   margin-top: 10px;
 }
 
+/* --- GALLERY --- */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -180,12 +185,12 @@ iframe {
 }
 
 .gallery img {
-  width: 300px;
+  width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
-  cursor: pointer;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .gallery img:hover {
@@ -208,44 +213,15 @@ iframe {
 }
 
 /* --- MOBILE RESPONSIVE --- */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px 20px;
-    width: 100%; /* full width on mobile */
-  }
-
-  header h1 {
-    font-size: 1.4rem;
-  }
-
-  nav {
-    margin-top: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column; /* stack buttons vertically */
-    gap: 10px;
-  }
-
-  .nav-btn {
-    width: 100%;
-    flex: none;
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
+@media (max-width: 1024px) {
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 25px;
   }
 
-  .house-card {
-    padding: 15px;
+  .houses-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .house-card img {
@@ -256,38 +232,53 @@ iframe {
     height: 140px;
   }
 
-  .houses-grid {
-    grid-template-columns: 1fr; /* one card per row */
-    gap: 25px;
+  header {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .gallery {
-    grid-template-columns: 1fr; /* one image per row */
-  }
-
-  .gallery img {
+  nav {
+    margin-top: 10px;
     width: 100%;
-    height: auto;
-    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .gallery img:hover {
-    transform: none;
-  }
-
-  .arrow {
-    font-size: 1.8rem;
-    padding: 14px;
+  .nav-btn {
+    width: 100%;
+    padding: 12px;
   }
 }
 
-/* --- DESKTOP MAX WIDTH --- */
-@media (min-width: 1200px) {
-  main {
-    max-width: 1200px;
-    margin: auto;
+/* --- SMALL MOBILE --- */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .house-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-box h3 {
+    font-size: 1.3rem;
+  }
+
+  .nav-btn {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  iframe {
+    height: 120px;
   }
 }
-
-
-
