@@ -5,7 +5,7 @@
   <title>КП Хилс – Детайли за къщата</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* --- HEADER STYLES --- */
+    /* --- HEADER --- */
     header {
       position: sticky;
       top: 0;
@@ -15,12 +15,12 @@
       color: white;
       padding: 15px 20px;
       display: flex;
-      justify-content: center; /* centers inner container */
+      justify-content: center;
     }
 
     .header-inner {
       width: 100%;
-      max-width: 1200px; /* limits on large screens */
+      max-width: 1200px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -35,7 +35,6 @@
     .logo-title img {
       width: 100px;
       height: auto;
-      display: block;
     }
 
     .logo-title h1 {
@@ -43,7 +42,6 @@
       font-size: 1.6rem;
     }
 
-    /* NAV BUTTON */
     .nav-btn {
       background: #3b82f6;
       color: white;
@@ -59,7 +57,6 @@
       background: #2563eb;
     }
 
-    /* --- MOBILE RESPONSIVE --- */
     @media (max-width: 768px) {
       .header-inner {
         flex-direction: column;
@@ -81,6 +78,46 @@
         width: 100%;
         padding: 12px;
         font-size: 1rem;
+      }
+    }
+
+    /* --- SECTIONS & GALLERY --- */
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #ddd;
+      scroll-margin-top: 80px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 30px 15px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 8px;
       }
     }
 
@@ -107,7 +144,6 @@
       transition: transform 0.3s ease;
     }
 
-    /* Navigation arrows */
     .arrow {
       position: absolute;
       top: 50%;
@@ -127,41 +163,6 @@
 
     .arrow-left { left: 20px; }
     .arrow-right { right: 20px; }
-
-    /* Sections styling */
-    section {
-      padding: 60px 20px;
-      border-bottom: 1px solid #ddd;
-      scroll-margin-top: 80px; /* offset for sticky header */
-    }
-
-    section h2 {
-      margin-bottom: 20px;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: 200px;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: transform 0.2s;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Mobile gallery */
-    @media (max-width: 768px) {
-      .gallery img {
-        width: 100%;
-      }
-    }
   </style>
 </head>
 <body>
@@ -235,7 +236,6 @@
   const modalImg = document.getElementById('modalImg');
   const prevArrow = document.getElementById('prevArrow');
   const nextArrow = document.getElementById('nextArrow');
-
   let currentIndex = 0;
 
   function showImage(index) {
