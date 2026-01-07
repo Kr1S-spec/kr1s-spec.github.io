@@ -31,15 +31,22 @@ header {
   top: 0;
   z-index: 99;
   position: sticky;
-  width: 100%; /* changed from 1680px to 100% */
-  max-width: 100%;
+  width: 100%;          /* always full viewport width */
   background: #1e3a8a;
   color: white;
-  padding: 20px 40px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center; /* center the inner container */
+}
+
+header .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;  /* constrain to main content width on large screens */
 }
+
 
 #houses-section {
   scroll-margin-top: 40px;
@@ -281,5 +288,6 @@ iframe {
     margin: auto;
   }
 }
+
 
 
