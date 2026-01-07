@@ -31,7 +31,8 @@ header {
   top: 0;
   z-index: 99;
   position: sticky;
-  width: 2000px;
+  width: 100%; /* changed from 1680px to 100% */
+  max-width: 100%;
   background: #1e3a8a;
   color: white;
   padding: 20px 40px;
@@ -43,7 +44,6 @@ header {
 #houses-section {
   scroll-margin-top: 40px;
 }
-
 
 .HeaderButton {
   min-height: 70px;
@@ -57,6 +57,7 @@ header {
   border-radius: 10px;
   cursor: pointer;
   margin-left: 10px;
+  font-size: 1rem;
 }
 
 main {
@@ -199,11 +200,13 @@ iframe {
   background: #2563eb;
 }
 
+/* --- MOBILE RESPONSIVE --- */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
     padding: 15px 20px;
+    width: 100%; /* full width on mobile */
   }
 
   header h1 {
@@ -214,13 +217,15 @@ iframe {
     margin-top: 10px;
     width: 100%;
     display: flex;
+    flex-direction: column; /* stack buttons vertically */
     gap: 10px;
   }
 
   .nav-btn {
-    flex: 1;
-    padding: 10px;
-    font-size: 0.9rem;
+    width: 100%;
+    flex: none;
+    font-size: 1rem;
+    padding: 12px;
   }
 
   main {
@@ -244,8 +249,13 @@ iframe {
     height: 140px;
   }
 
+  .houses-grid {
+    grid-template-columns: 1fr; /* one card per row */
+    gap: 25px;
+  }
+
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* one image per row */
   }
 
   .gallery img {
@@ -262,13 +272,9 @@ iframe {
     font-size: 1.8rem;
     padding: 14px;
   }
-
-  .houses-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
 }
 
+/* --- DESKTOP MAX WIDTH --- */
 @media (min-width: 1200px) {
   main {
     max-width: 1200px;
