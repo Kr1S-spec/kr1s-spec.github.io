@@ -31,7 +31,7 @@ header {
   top: 0;
   z-index: 99;
   position: sticky;
-  width: 100%; /* changed from 1680px to 100% */
+  width: 1680px; /* changed from 1680px to 100% */
   max-width: 100%;
   background: #1e3a8a;
   color: white;
@@ -281,3 +281,4 @@ iframe {
     margin: auto;
   }
 }
+
